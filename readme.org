@@ -1,0 +1,10 @@
+* Installation
+
+Download ~yasupp.el~ to your lisp directory.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package yasupp
+    :hook
+    (yas-minor-mode . yasp-minor-mode)
+    )
+#+END_SRC
