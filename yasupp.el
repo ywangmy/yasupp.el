@@ -47,7 +47,7 @@ cursor position when evaluating conditions.
   (interactive)
   (unless (or (not yasp-minor-mode) (region-active-p))
     (let* ((start (point)) (end (point))
-           (syntaxes "w_")
+           (syntaxes "\\w_")
            )
       (skip-syntax-backward syntaxes)
       (setq start (point))
@@ -75,7 +75,7 @@ See `yasp-selected-current'."
     (let* ((start (point)) (end (point))
            )
       (save-excursion
-        (skip-syntax-backward "()w")
+        (skip-syntax-backward "w")
         (setq start (point))
       )
       (when (not (= start end))
